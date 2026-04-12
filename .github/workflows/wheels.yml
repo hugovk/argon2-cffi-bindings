@@ -3,8 +3,6 @@ name: Wheels
 
 on:
   push:
-    tags:
-      - "*"
   pull_request:
   workflow_dispatch:
   schedule:
