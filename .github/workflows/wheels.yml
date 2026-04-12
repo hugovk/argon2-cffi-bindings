@@ -28,7 +28,7 @@ jobs:
           - os: windows-2022
           - os: windows-11-arm
           - os: macOS-14
-          - os: ubuntu-24.04-riscv
+#          - os: ubuntu-24.04-riscv
 
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
