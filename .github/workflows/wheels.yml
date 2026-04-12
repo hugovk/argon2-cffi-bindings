@@ -61,13 +61,14 @@ jobs:
           path: ./wheelhouse/*.whl
 
   pypi-publish:
-    if: github.event.repository.fork == false && github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+    # if: github.event.repository.fork == false && github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+    # if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
     needs: wheels
     runs-on: ubuntu-latest
     name: Upload release to PyPI
-    environment:
-      name: release-pypi
-      url: https://pypi.org/p/argon2-cffi-bindings
+    # environment:
+    #  name: release-pypi
+    #  url: https://pypi.org/p/argon2-cffi-bindings
     permissions:
       id-token: write
     steps:
